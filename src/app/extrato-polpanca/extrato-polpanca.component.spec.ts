@@ -6,6 +6,7 @@ import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ExtratoPolpancaComponent } from './extrato-polpanca.component';
+import { CoreModule } from '../core/core.module';
 
 describe('ExtratoPolpancaComponent', () => {
   let component: ExtratoPolpancaComponent;
@@ -13,6 +14,9 @@ describe('ExtratoPolpancaComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [
+        CoreModule,
+      ],
       declarations: [ ExtratoPolpancaComponent ],
       schemas: [NO_ERRORS_SCHEMA],
     })

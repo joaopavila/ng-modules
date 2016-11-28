@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NativeCommunicationService } from '../core/native-communication/native-communication.service';
 
 @Component({
   selector: 'app-extrato-polpanca',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ExtratoPolpancaComponent implements OnInit {
 
-  constructor() { }
+  hello;
+
+  constructor(private native: NativeCommunicationService) { }
 
   ngOnInit() {
+    this.hello = this.native.getData('hello');
   }
 
 }
