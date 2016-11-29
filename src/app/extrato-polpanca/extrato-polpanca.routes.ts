@@ -7,13 +7,13 @@ const routes: Routes = [
     path: '', component: ExtratoPolpancaComponent,
     // children: [
     //   { path: '',    component: ExtratoPolpancaListComponent },
-    //   { path: ':id', component: ExtratoPolpancaDetailComponent }
+    //   { path: ':id', component: ExtratoPolpancaDetailComponent },
     // ],
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class ExtratoPolpancaRoutingModule {}
