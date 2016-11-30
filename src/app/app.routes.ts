@@ -12,8 +12,8 @@ export const routes: Routes = [
     loadChildren: 'app/home/home.module#HomeModule',
   },
   {
-    path: 'extrato-polpanca',
-    loadChildren: 'app/extrato-polpanca/extrato-polpanca.module#ExtratoPolpancaModule',
+    path: 'extrato-poupanca',
+    loadChildren: 'app/extrato-poupanca/extrato-poupanca.module#ExtratoPoupancaModule',
   },
 ];
 

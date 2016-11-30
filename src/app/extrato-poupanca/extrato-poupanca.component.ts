@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { NativeCommunicationService } from '../core/native-communication/native-communication.service';
 
 @Component({
-  selector: 'app-extrato-polpanca',
-  templateUrl: './extrato-polpanca.component.html',
-  styleUrls: ['./extrato-polpanca.component.css']
+  selector: 'app-extrato-poupanca',
+  templateUrl: './extrato-poupanca.component.html',
+  styleUrls: ['./extrato-poupanca.component.css']
 })
-export class ExtratoPolpancaComponent implements OnInit {
+export class ExtratoPoupancaComponent implements OnInit {
 
   hello;
 
