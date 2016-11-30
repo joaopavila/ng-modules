@@ -8,12 +8,12 @@ import { NativeCommunicationService } from '../core/native-communication/native-
 })
 export class ExtratoPoupancaComponent implements OnInit {
 
-  hello;
+  data;
 
   constructor(private native: NativeCommunicationService) { }
 
   ngOnInit() {
-    this.hello = this.native.getData('hello');
+    this.data = this.native.getData('extrato-poupanca');
   }
 
 }

@@ -1,11 +1,11 @@
 /* tslint:disable:no-unused-variable */
 
-import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
 import { ExtratoPoupancaComponent } from './extrato-poupanca.component';
+import { ExtratoPoupancaModule } from './extrato-poupanca.module';
 import { CoreModule } from '../core/core.module';
 
 describe('ExtratoPoupancaComponent', () => {
@@ -16,9 +16,8 @@ describe('ExtratoPoupancaComponent', () => {
     TestBed.configureTestingModule({
       imports: [
         CoreModule,
+        ExtratoPoupancaModule,
       ],
-      declarations: [ ExtratoPoupancaComponent ],
-      schemas: [NO_ERRORS_SCHEMA],
     })
     .compileComponents();
   }));
@@ -29,7 +28,10 @@ describe('ExtratoPoupancaComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should print extrato poupanca itens given from native comunnication', () => {
+    const extrato = fixture.debugElement.queryAll(By.css('ul li'));
+    expect(extrato.length).toBe(3);
+    expect(extrato.shift().nativeElement.textContent.trim()).toBe('item 1 - 111');
   });
+
 });

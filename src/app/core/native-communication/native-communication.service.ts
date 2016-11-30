@@ -6,13 +6,11 @@ export class NativeCommunicationService {
 
   constructor() { }
 
-  setData(key, value) {
-    console.log('setData', key, value);
+  setData(key: string, value) {
     NativeCommunicationMock[key] = value;
   }
 
-  getData(key) {
-    console.log('getData', key);
+  getData(key: string) {
     return NativeCommunicationMock[key];
   }
 

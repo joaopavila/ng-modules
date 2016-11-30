@@ -2,4 +2,8 @@
   extrato-poupanca works!
 </p>
 
-<b>Native says hello {{hello}}</b>
+<ul>
+  <li *ngFor="let item of data">
+    {{item.desc}} - {{item.value}}
+  </li>
+</ul>
