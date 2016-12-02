@@ -5,11 +5,14 @@
   "angular-cli": {},
   "scripts": {
     "start": "ng serve",
-    "build": "ng build --prod --aot",
+    "build": "ng build --prod --aot && npm run sw",
+    "sw": "sw-precache --root=dist --config=sw-precache-config.js",
+    "postsw": "uglifyjs ./dist/service-worker.js -o ./dist/service-worker.js -c --unsafe",
     "lint": "tslint \"src/**/*.ts\"",
     "test": "ng test",
     "pree2e": "webdriver-manager update",
-    "e2e": "protractor"
+    "e2e": "protractor",
+    "build-serve": "cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html"
   },
   "private": true,
   "dependencies": {
@@ -39,7 +42,9 @@
     "karma-cli": "^1.0.1",
     "karma-jasmine": "^1.0.2",
     "karma-remap-istanbul": "^0.2.1",
+    "live-server": "^1.1.0",
     "protractor": "4.0.9",
+    "sw-precache": "^4.2.3",
     "ts-node": "1.2.1",
     "tslint": "3.13.0",
     "typescript": "2.0.10",
